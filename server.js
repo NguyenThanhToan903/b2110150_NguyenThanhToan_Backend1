@@ -2,7 +2,7 @@ const app = require("./app");
 const config = require("./app/config");
 
 //start server
-const PORT = config.app.port;
+const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on post ${PORT}.`);
 });
