@@ -2,9 +2,11 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
+const contactRouter = require("./app/routes/contact.route");
 
 app.use(cors());
 app.use(express.json());
+app.use("/api/contects", contactRouter);
 
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to contack book application." });
